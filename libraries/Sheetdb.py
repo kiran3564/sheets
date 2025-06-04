@@ -5,7 +5,11 @@ import json
 from datetime import datetime
 from robot.api import logger
 
+
+
 class BearerAuth(requests.auth.AuthBase):
+
+
     def __init__(self, token):
         self.token = token
     def __call__(self, r):
@@ -16,6 +20,8 @@ class Sheetdb:
     def __init__(self, url: str, api_token: str):
         self.url = url
         self.auth = BearerAuth(api_token)
+
+
 
     def get_content(self):
         # return a list of data from sheet
