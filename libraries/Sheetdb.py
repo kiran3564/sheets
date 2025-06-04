@@ -23,7 +23,7 @@ class Sheetdb:
 
 
 
-    def get_content(self):
+    def get_conten(self):
         # return a list of data from sheet
         # https://docs.sheetdb.io/sheetdb-api/read#get-content
         res = self.get()
