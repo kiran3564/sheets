@@ -1,12 +1,13 @@
+
 *** Settings ***
 Resource               ../resources/common.resource
 Suite Setup            OpenBrowser                 about:blank                 chrome
 Suite Teardown         CloseAllBrowsers
+Library                ../libraries/Sheetdb.py
 
 *** Test Cases ***
 First Test
-    [Documentation]
-    [Tags]
+    
     ${response}=       Get Content
     Log To Console     Get response: ${response}                 # [] for the first run
 
@@ -22,8 +23,7 @@ First Test
 
 
 Another Test
-    [Documentation]
-    [Tags]
+    
     ${response}=       Get Content
     Log To Console     Get response: ${response}                 # [{"id":"1","name":"foo","age":"13"}]
 
